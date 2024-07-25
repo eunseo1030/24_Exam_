@@ -5,19 +5,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        int firstTime = 0;
+        int secondTime = 1;
 
-        int n = in.nextInt();
+        for (int i = 0; i < 10; i++) {
+            System.out.print(firstTime+" ");
 
-        for (int i = n; i > 0; i--) {
-            for (int j = 1; j <=n-i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = i; j > 0; j--) {
-                System.out.print(j+ " ");
-            }
-            System.out.println();
+            int nextTime = firstTime + secondTime;
+            firstTime = secondTime;
+            secondTime = nextTime;
+        }
+
+
+
+
         }
 
     }
-}
