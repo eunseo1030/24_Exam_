@@ -8,11 +8,13 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         int n = in.nextInt();
-        int m = in.nextInt();
 
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                System.out.print("*");
+        for (int i = n; i > 0; i--) {
+            for (int j = 1; j <=n-i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = i; j > 0; j--) {
+                System.out.print(j+ " ");
             }
             System.out.println();
         }
